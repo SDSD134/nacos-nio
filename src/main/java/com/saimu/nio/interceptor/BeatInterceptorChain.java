@@ -1,6 +1,6 @@
 package com.saimu.nio.interceptor;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -9,12 +9,16 @@ import java.util.List;
  * @CreateDate 2021/10/11 18:19
  **/
 public class BeatInterceptorChain implements  InterceptorChain{
-//    public List<AbstractBeatInterceptor> abstractBeatInterceptorList = new concu
+    public List<AbstractBeatInterceptor> abstractBeatInterceptorList = new LinkedList<AbstractBeatInterceptor>();
+
+
+    @Override
     public void addInterceptor(Interceptor interceptor) {
 
     }
 
-    public void doInterceptor(Interceptor object) {
+    @Override
+    public void doInterceptor(Interceptable object) {
 
     }
 }

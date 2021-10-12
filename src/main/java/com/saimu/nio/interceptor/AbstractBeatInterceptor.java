@@ -10,6 +10,7 @@ import com.saimu.nio.task.BeatTask;
  **/
 public abstract class AbstractBeatInterceptor implements Interceptor<BeatTask> {
 
+    @Override
     public boolean isInterceptType(Class<?> type) {
         //确定此Class对象表示的类或接口是否与指定的Class参数表示的类或接口相同，或者是其超类或超接口
         return BeatTask.class.isAssignableFrom(type);
